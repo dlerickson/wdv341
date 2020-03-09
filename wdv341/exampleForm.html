@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV341 Intro PHP - Form Example</title>
+	<style>
+	
+		#honeyPot {
+			display: none;
+		}
+	
+	</style>
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+<h2>WDV101 Intro HTML and CSS Chapter 9 - Creating Forms - Code Example</h2>
+<p><strong>Basic Form Handler</strong> - This process will display the 'name = value' pairs for all the elements of a form. This summary will on any number of form elements regardless of their name attribute value. </p>
+<p>Use <strong>basicFormExample.php</strong> in the action attribute of your form. </p>
+<p>Field '<strong>name</strong>' - The value of the name attribute from the HTML form element.</p>
+<p>Field <strong>'value</strong>' - The value entered in the field. This will vary depending upon the HTML form element.</p>
+	
+	
+<form id="form1" name="form1" method="post" action="formHandler.php">
+	
+  <p>First Name:
+    <input type="text" name="firstName" id="firstName" />
+  </p>
+	
+  <p>Last Name:
+    <input type="text" name="lastName" id="lastName" />
+  </p>
+	
+  <p>School:
+    <input type="text" name="school" id="school" />
+  </p>
+	
+  <p>Radio One
+    <input type="radio" value="radioOne" name="confirm" id="radioOne" checked/>
+    The Duece
+    <input type="radio" value="theDuece" name="confirm" id="theDuece" />
+    Third Amigo
+    <input type="radio" value="thirdAmigo" name="confirm" id="thirdAmigo" />
+  </p>
+	
+  <p>Mic Check 1
+    <input type="checkbox" name="checkOne" id="checkOne" />
+    Check 2 check 2
+    <input type="checkbox" name="checkTwo" id="checkTwo" />
+  </p>
+	
+  <p>
+    <select name="activityOption">
+      <option value="ddWork">Work</option>
+      <option value="ddHomework">Homework</option>
+      <option value="ddHawkeyes">Hawkeyes</option>
+      <option value="ddCraftBeers">Craft Beer</option>
+    </select>
+  </p>
+	
+	<input name="honeyPot" type="text" id="honeyPot"/>
+	
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+	
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
