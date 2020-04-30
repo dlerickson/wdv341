@@ -355,7 +355,7 @@ function validateThreeWords()
 
 if( isset($_POST['submitBio']) )
 {	
-	$honeypot = $_POST['middleName'];
+	$honeypot = $_POST['middleName']; //this is kinda fun
 	
 		if ( !empty($honeypot)){
 			return;
