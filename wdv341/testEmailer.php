@@ -1,8 +1,14 @@
+<?php
+		ini_set('sendmail_from', 'contact@donerickson.net');
+	ini_set('SMTP', 'mail.heartland-webhosting.com');
+ini_set('smtp_port', 465)
+
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Email test</title>
 </head>
 
 <body>
@@ -14,13 +20,24 @@
 	
 		$emailTest = new Emailer();	//instantiate a new Emailer object
 	
-		$emailTest->set_senderEmail("thedonerickson@gmail.com");
+		$emailTest->set_recipientEmail("thedonerickson@gmail.com");	//to
+		echo "To: "; echo $emailTest->getRecipientEmail();
+		echo "<br>";
 	
-		echo $emailTest->getSenderEmail();	//return email address
+		$emailTest->set_subject("Email Test");	//subj
+		echo "Subject: "; echo $emailTest->getSubject();
+		echo "<br>";
 	
+		$emailTest->set_message("My message test.");	//msg
+		echo "Message: "; echo $emailTest->getMessage();
+		echo "<br>";
+	
+		$emailTest->set_senderEmail("contact@donerickson.net");	//from
+		echo "From: "; echo $emailTest->getSenderEmail();
+		echo "<br>";
 		echo $emailTest->sendEmail();	//send email to SMTP server
 	
-		$cat = "coast";	?>
+	?>
 </body>
 </html>
 

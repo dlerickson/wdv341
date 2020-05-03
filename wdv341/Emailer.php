@@ -12,6 +12,7 @@ class Emailer {
 	private $recipientEmail = "";
 	private $senderEmail = "";
 	private $subject = "";
+	private $success = "";
 	
 	//constructor method
 	//1. DOES NOT make a new object
@@ -67,20 +68,21 @@ class Emailer {
 			//this will format and send an email to the SMTP server
 			//it will use the PHP mail()
 			
-			$to 	 = $this->getRecipientEmail();
+			$to = $this->getRecipientEmail();
 			$subject = $this->getSubject();
 			$message = $this->getMessage();
-			$headers = 'From: <info@jhgullion.org>';
+			$headers = 'From: <contact@donerickson.net>';
+			$success = mail($to,$subject,$message,$headers);
+			return $success;	//PHP function
 			
-			return mail($to,$subject,$message,$headers);	//PHP function
+			if ($success){
+				echo "1"; 
+			} else {
+				echo "Nope";
+			}
 		}
 
 
 }
-
-
-
-
-
 
 ?>
